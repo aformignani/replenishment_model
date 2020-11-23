@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> test 2 </title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+        <script type="text/javascript" language= "Javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" language= "Javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script> 
+        $(document).ready( function () {
+            ('#myTable').DataTable( {
+            serverSide: true,
+            ajax: {
+                url: 'https://api.miscusi.com/api/Analytcis/supply',
+                dataFilter: function(data){
+                    var json = jQuery.parseJSON( data );
+                    json.recordsTotal = json.total;
+                    json.recordsFiltered = json.total;
+                    json.data = json.list;
+        
+                    return JSON.stringify( json ); // return JSON string
+                }
+                 }
+                } );
+        </script>
+    </head>
+</html>
