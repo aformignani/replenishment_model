@@ -1,0 +1,303 @@
+{
+"Dim_forecast": [
+	{
+		"store_name" : "Bergamo Sant'Orsola",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Cadorna",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Colonne",
+		"week_stock" : 10600,
+		"week_cross" : 10600,
+		"days_previous_stock" : 7000
+	},
+	{
+		"store_name" : "Firenze",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Litta",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Minniti",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Pavia",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "San Camillo",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Torino Carlina",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Verona",
+		"week_stock" : 5800,
+		"week_cross" : 5800,
+		"days_previous_stock" : 4200
+	},
+	{
+		"store_name" : "Bergamo Sant'Orsola",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Cadorna",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Colonne",
+		"week_stock" : 10600,
+		"week_cross" : 10600,
+		"days_previous_stock" : 7000
+	},
+	{
+		"store_name" : "Firenze",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Litta",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Minniti",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Pavia",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "San Camillo",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Torino Carlina",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Verona",
+		"week_stock" : 5800,
+		"week_cross" : 5800,
+		"days_previous_stock" : 4200
+	},
+	{
+		"store_name" : "Bergamo Sant'Orsola",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Cadorna",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Colonne",
+		"week_stock" : 10600,
+		"week_cross" : 10600,
+		"days_previous_stock" : 7000
+	},
+	{
+		"store_name" : "Firenze",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Litta",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Minniti",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Pavia",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "San Camillo",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Torino Carlina",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Verona",
+		"week_stock" : 5800,
+		"week_cross" : 5800,
+		"days_previous_stock" : 4200
+	},
+	{
+		"store_name" : "Bergamo Sant'Orsola",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Cadorna",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Colonne",
+		"week_stock" : 10600,
+		"week_cross" : 10600,
+		"days_previous_stock" : 7000
+	},
+	{
+		"store_name" : "Firenze",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Litta",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Minniti",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Pavia",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "San Camillo",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Torino Carlina",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Verona",
+		"week_stock" : 5800,
+		"week_cross" : 5800,
+		"days_previous_stock" : 4200
+	},
+	{
+		"store_name" : "Bergamo Sant'Orsola",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Cadorna",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Colonne",
+		"week_stock" : 10600,
+		"week_cross" : 10600,
+		"days_previous_stock" : 7000
+	},
+	{
+		"store_name" : "Firenze",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Litta",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Minniti",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Pavia",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "San Camillo",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Torino Carlina",
+		"week_stock" : 0,
+		"week_cross" : 0,
+		"days_previous_stock" : 0
+	},
+	{
+		"store_name" : "Verona",
+		"week_stock" : 5800,
+		"week_cross" : 5800,
+		"days_previous_stock" : 4200
+	}
+]}

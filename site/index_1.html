@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> test 2 </title>
+        <title> test </title>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-        <script type="text/javascript" language= "Javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" language= "Javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script type="text/javascript" language= "Javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-        <script> 
-        $(document).ready( function () {
-            ('#myTable').DataTable( {
-            serverSide: true,
-            ajax: {
-                url: 'https://api.miscusi.com/api/Analytcis/supply',
-                dataFilter: function(data){
-                    var json = jQuery.parseJSON( data );
-                    json.recordsTotal = json.total;
-                    json.recordsFiltered = json.total;
-                    json.data = json.list;
-        
-                    return JSON.stringify( json ); // return JSON string
-                }
-                 }
+        <script>
+            $(document).ready(function() {
+                $('#example').DataTable( {
+                    "ajax": "Dim_store_202011241000.json",
+                    "columns": [
+                        { "Dim_store": "dw_id_store" },
+                        { "Dim_store": "id" },
+                        { "Dim_store": "code" },
+                        { "Dim_store": "store_name" },
+                        { "Dim_store": "district" },
+                        { "Dim_store": "region" },
+                        { "Dim_store": "store_name_short" },
+                        { "Dim_store": "cover" },
+                        { "Dim_store": "opening_date" },
+                        { "Dim_store": "ls_code" }
+                    ]
                 } );
+            } );
         </script>
     </head>
+    <tbody>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>dw_id_store</th>
+                    <th>id</th>
+                    <th>code</th>
+                    <th>store_name</th>
+                    <th>district</th>
+                    <th>region</th>
+                    <th>store_name_short</th>
+                    <th>cover</th>
+                    <th>opening_date</th>
+                    <th>ls_code</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>dw_id_store</th>
+                    <th>id</th>
+                    <th>code</th>
+                    <th>store_name</th>
+                    <th>district</th>
+                    <th>region</th>
+                    <th>store_name_short</th>
+                    <th>cover</th>
+                    <th>opening_date</th>
+                    <th>ls_code</th>
+                </tr>
+            </tfoot>
+        </table>
+    </tbody>
 </html>
+
+
+    
+

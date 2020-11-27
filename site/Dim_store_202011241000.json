@@ -1,0 +1,135 @@
+{
+"Dim_store": [
+	{
+		"dw_id_store" : 1,
+		"id" : 6,
+		"code" : 2,
+		"store_name" : "San Camillo",
+		"district" : "MI",
+		"region" : "Lombardia",
+		"store_name_short" : "Camillo",
+		"cover" : 127,
+		"opening_date" : "2017-11-30 00:00:00.0",
+		"ls_code" : "I005"
+	},
+	{
+		"dw_id_store" : 2,
+		"id" : 16,
+		"code" : 1,
+		"store_name" : "Litta",
+		"district" : "MI",
+		"region" : "Lombardia",
+		"store_name_short" : "Litta",
+		"cover" : 70,
+		"opening_date" : "2017-02-18 00:00:00.0",
+		"ls_code" : "I001"
+	},
+	{
+		"dw_id_store" : 3,
+		"id" : 17,
+		"code" : 3,
+		"store_name" : "Minniti",
+		"district" : "MI",
+		"region" : "Lombardia",
+		"store_name_short" : "Minniti",
+		"cover" : 119,
+		"opening_date" : "2018-09-04 00:00:00.0",
+		"ls_code" : "I004"
+	},
+	{
+		"dw_id_store" : 4,
+		"id" : 18,
+		"code" : 4,
+		"store_name" : "Colonne",
+		"district" : "MI",
+		"region" : "Lombardia",
+		"store_name_short" : "Colonne",
+		"cover" : 150,
+		"opening_date" : "2018-11-19 00:00:00.0",
+		"ls_code" : "I003"
+	},
+	{
+		"dw_id_store" : 5,
+		"id" : 19,
+		"code" : 5,
+		"store_name" : "Cadorna",
+		"district" : "MI",
+		"region" : "Lombardia",
+		"store_name_short" : "Cadorna",
+		"cover" : 145,
+		"opening_date" : "2018-12-10 00:00:00.0",
+		"ls_code" : "I002"
+	},
+	{
+		"dw_id_store" : 6,
+		"id" : 21,
+		"code" : 7,
+		"store_name" : "Torino Carlina",
+		"district" : "TO",
+		"region" : "Piemonte",
+		"store_name_short" : "Carlina",
+		"cover" : 110,
+		"opening_date" : "2019-03-25 00:00:00.0",
+		"ls_code" : "I010"
+	},
+	{
+		"dw_id_store" : 7,
+		"id" : 20,
+		"code" : 6,
+		"store_name" : "Bergamo Sant'Orsola",
+		"district" : "BG",
+		"region" : "Lombardia",
+		"store_name_short" : "Bergamo",
+		"cover" : 110,
+		"opening_date" : "2019-04-08 00:00:00.0",
+		"ls_code" : "I009"
+	},
+	{
+		"dw_id_store" : 8,
+		"id" : 22,
+		"code" : 8,
+		"store_name" : "Pavia",
+		"district" : "PV",
+		"region" : "Lombardia",
+		"store_name_short" : "Pavia",
+		"cover" : 72,
+		"opening_date" : "2019-09-23 00:00:00.0",
+		"ls_code" : "I006"
+	},
+	{
+		"dw_id_store" : 9,
+		"id" : 23,
+		"code" : 9,
+		"store_name" : "Firenze",
+		"district" : "FI",
+		"region" : "Toscana",
+		"store_name_short" : "Firenze",
+		"cover" : 80,
+		"opening_date" : "2019-12-09 00:00:00.0",
+		"ls_code" : "I007"
+	},
+	{
+		"dw_id_store" : 10,
+		"id" : 24,
+		"code" : 10,
+		"store_name" : "Verona",
+		"district" : "VR",
+		"region" : "Veneto",
+		"store_name_short" : "Verona",
+		"cover" : 82,
+		"opening_date" : "2019-12-16 00:00:00.0",
+		"ls_code" : "I008"
+	},
+	{
+		"dw_id_store" : 11,
+		"id" : 25,
+		"code" : 11,
+		"store_name" : "Torino Principi",
+		"district" : "TO",
+		"region" : "Piemonte",
+		"store_name_short" : "Princpi",
+		"cover" : 87,
+		"opening_date" : "2020-10-05 00:00:00.0",
+		"ls_code" : "I011"
+	}
+]}
