@@ -1,0 +1,391 @@
+
+
+(function ($) {
+
+	var environment = "https://api.miscusi.com";
+	//var environment = "https://localhost:44315";
+	let user_key = { "user-key": "28236d8ec201df516d0f6472d516d72d" };
+
+	var button_click = false;
+
+
+
+	var currentdate = new Date();
+	var datetime = currentdate.getDate() + "_"
+		+ (currentdate.getMonth() + 1) + "_"
+		+ currentdate.getFullYear() + "_"
+		+ currentdate.getHours() + "_"
+		+ currentdate.getMinutes();
+
+	function ISO8601_week_no(dt) {
+		var tdt = new Date(dt.valueOf());
+		var dayn = (dt.getDay() + 6) % 7;
+		tdt.setDate(tdt.getDate() - dayn + 3);
+		var firstThursday = tdt.valueOf();
+		tdt.setMonth(0, 1);
+		if (tdt.getDay() !== 4) {
+			tdt.setMonth(0, 1 + ((4 - tdt.getDay()) + 7) % 7);
+		}
+		return 1 + Math.ceil((firstThursday - tdt) / 604800000);
+	}
+
+	var week = ISO8601_week_no(currentdate); 
+
+
+	$(document).ready(function () {
+
+		/* Custom filtering function which will search data in column 12  */
+		$.fn.dataTable.ext.search.push(
+			function (settings, data, dataIndex) {
+				if (button_click) {
+					var ct_to_buy = parseFloat(data[12]) || 0; // use data for the ct_to_buy column
+					if (ct_to_buy > 0) {
+						return true;
+					}
+					return false;
+				} else {
+					//return true if the above is not executed
+					return true;
+				}
+			}
+		);
+
+
+
+	var editor = new $.fn.dataTable.Editor( {
+
+		ajax: {
+			url: environment+'/wolfbe/api/Supply/reorder_model_view?week=' + week,
+			headers: user_key,
+		},
+		table: '#reorder_model_view',
+		fields: [
+			{
+				"label": "store_name:",
+				"name": "reorder_model_view.store_name"
+			},
+			{
+				"label": "qsl_category:",
+				"name": "reorder_model_view.qsl_category"
+			},
+			{
+				"label": "code:",
+				"name": "reorder_model_view.code"
+			},
+			{
+				"label": "description:",
+				"name": "reorder_model_view.description"
+			},
+			{
+				"label": "article_type:",
+				"name": "reorder_model_view.article_type"
+			},
+			{
+				"label": "ct_description:",
+				"name": "reorder_model_view.ct_description"
+			},
+			{
+				"label": "current_stock:",
+				"name": "reorder_model_view.current_stock"
+			},
+			{
+				"label": "forecasted_stock_at_arrival:",
+				"name": "reorder_model_view.forecasted_stock_at_arrival"
+			},
+			{
+				"label": "transfer_unit:",
+				"name": "reorder_model_view.transfer_unit"
+			},
+			{
+				"label": "qty_consumed_previous_week:",
+				"name": "reorder_model_view.qty_consumed_previous_week"
+			},
+			{
+				"label": "base_unit:",
+				"name": "reorder_model_view.base_unit"
+			},
+			{
+				"label": "ct_suggested:",
+				"name": "reorder_model_view.ct_suggested"
+			},
+			{
+				"label": "ct_suggested_sm:",
+				"name": "reorder_view.ct_suggested"
+			},
+			{
+				"label": "ct_to_buy:",
+				"name": "reorder_model_view.ct_to_buy",
+				'className': 'editable'
+			},
+			{
+				"label": "week_released:",
+				"name": "reorder_model_view.week_released"
+			},
+			{
+				"label": "latest_update:",
+				"name": "reorder_model_view.latest_update"
+			},
+			{
+				"label": "user:",
+				"name": "reorder_model_view.user",
+				"def": $("#user_email").text().trim()
+			}
+		]
+	});
+
+
+	editor.on('preSubmit', function (e, data, action) {
+		$.each(data.data, function (key, values) {
+			data.data[key]['user'] = $("#user_email").text().trim();
+		});
+	});
+
+
+	// Activate an inline edit on click of a table cell
+	$('#reorder_model_view').on('click', 'tbody td.editable', function (e) {
+		editor.inline(this);
+	});
+
+
+	var table = $('#reorder_model_view').DataTable({
+		ajax: {
+			url: environment+'/wolfbe/api/Supply/reorder_model_view?week=' + week,
+			headers: user_key
+		},
+		columns: [
+			{
+				"data": "reorder_model_view.store_name",
+				"width": "150px"
+			},
+			{
+				"data": "reorder_model_view.qsl_category"
+			},
+			{
+				"data": "reorder_model_view.code"
+			},
+			{
+				"data": "reorder_model_view.description"
+			},
+			{
+				"data": "reorder_model_view.article_type",
+				"width": "130px"
+			},
+			{
+				"data": "reorder_model_view.ct_description"
+			},
+			{
+				"data": "reorder_model_view.current_stock"
+			},
+			{
+				"data": "reorder_model_view.forecasted_stock_at_arrival"
+			},
+			{
+				"data": "reorder_model_view.transfer_unit"
+			},
+			{
+				"data": "reorder_model_view.qty_consumed_previous_week"
+			},
+			{
+				"data": "reorder_model_view.base_unit"
+			},
+			{
+				"data": "reorder_model_view.ct_suggested",
+				"width": "90px"
+			},
+			{
+				"data": "reorder_view.ct_suggested",
+				"width": "90px"
+			},
+			{
+				"data": "reorder_model_view.ct_to_buy", 'className': 'editable',
+				"width": "90px"
+			},
+			{
+				"data": "reorder_model_view.week_released"
+			},
+			{
+				"data": "reorder_model_view.latest_update"
+			},
+			{
+				"data": "reorder_model_view.user"
+			}
+		],
+
+		initComplete: function () {
+			this.api().columns([0,4]).every(function () {
+				var column = this;
+				var select = $('<select class="selectpicker filterintable" title=""><option value=""></option></select>')
+					.appendTo($(column.header()))
+					.on('change', function () {
+						var val = $.fn.dataTable.util.escapeRegex(
+							$(this).val()
+						);
+
+						column
+							.search(val ? '^' + val + '$' : '', true, false)
+							.draw();
+					});
+
+				column.data().unique().sort().each(function (d, j) {
+					select.append('<option value="' + d + '">' + d + '</option>')
+				});
+			});
+
+			$('select.filterintable').selectpicker();
+			$('.btn.dropdown-toggle.bs-placeholder.btn-light').removeClass("btn-light").removeClass("bs-placeholder").addClass("btn-secondary");
+		},
+
+
+		//grouping
+		order: [[1, 'asc']],
+		rowGroup: {
+			dataSrc: 'reorder_model_view.qsl_category'
+		},
+
+		//child-rows
+		resposive: true,
+		responsive: {
+			details: {
+				type: 'column'
+			}
+		},
+
+		//click and drag the header to move it
+		colReorder: true,
+
+		//responsive
+		columnDefs: [{
+			className: 'dtr-control',
+			orderable: false,
+			"targets": [0, 4]
+		},
+
+		{ "width": "10%", "targets": 13 },
+		{ responsivePriority: 1, targets: 1 },
+		{ responsivePriority: 1, targets: 2 },
+		{ responsivePriority: 1, targets: 3 },
+		{ responsivePriority: 1, targets: 11 },
+		{ responsivePriority: 1, targets: 12 },
+		{ responsivePriority: 2, targets: 4 },
+		{ responsivePriority: 2, targets: 5 },
+			{
+				"targets": [6],
+				"data": 'creator',
+				render: function (data, type, row) {
+					return row.reorder_model_view.current_stock + '  ' + row.reorder_model_view.transfer_unit;
+				}
+			},
+			{
+				"targets": [7],
+				"data": 'creator',
+				render: function (data, type, row) {
+					return row.reorder_model_view.forecasted_stock_at_arrival + '  ' + row.reorder_model_view.transfer_unit;
+				}
+			},
+			{
+				"targets": [9],
+				"data": 'creator',
+				render: function (data, type, row) {
+					return row.reorder_model_view.qty_consumed_previous_week + '  ' + row.reorder_model_view.base_unit;
+				}
+			},
+			{ "visible": false, "targets": [8,10] }
+		],
+
+		// change name to filter panes
+		language: {
+			searchPanes: {
+				clearMessage: 'Obliterate Selections',
+				collapse: { 0: 'Scegli il tuo store e filtra', _: 'Scegli il tuo store e filtra (%d)' }
+			}
+		},
+
+
+		//page length
+		lengthChange: true,
+
+
+		// buttons
+		dom: 'Blfrtip',
+		"language": {
+			"lengthMenu": 'Display <select class="custom-select show-tick">' +
+				'<option value="10">10</option>' +
+				'<option value="20">20</option>' +
+				'<option value="30">30</option>' +
+				'<option value="40">40</option>' +
+				'<option value="50">50</option>' +
+				'<option value="-1">All</option>' +
+				'</select> records'
+		},
+
+		buttons: [
+
+			//riepilogo
+			{
+				text: "Riepilogo",
+				action: function (e, table, node, config) {
+					button_click = true;
+					table.draw();
+				}
+			},
+
+			//elimina filtro riepilogo
+			{
+				text: "Togli riepilogo",
+				action: function (e, table, node, config) {
+					button_click = false;
+					table.draw();
+				}
+			},
+			
+		
+
+			// export csv stock
+			{
+				extend: 'csvHtml5',
+				text: "csv STOCK",
+				filename: datetime + '_STOCK_ordine_acquisto',
+				header: false,
+				fieldBoundary: '',
+				fieldSeparator: ';',
+				exportOptions: {
+					columns: [2, 12],
+					rows: function(idx, data, node) {
+						if (table.cell(idx, 4).data() === 'STOCK' && table.cell(idx, 12).data() > 0) {
+							return true;
+						}
+						return false;
+					}
+
+				}
+			},
+
+			// export csv cross
+			{
+				extend: 'csvHtml5',
+				text: "csv CROSS",
+				filename: datetime + '_CROSS_ordine_acquisto',
+				header: false,
+				fieldBoundary: '',
+				fieldSeparator: ';',
+				exportOptions: {
+					columns: [2, 12],
+					rows: function (idx, data, node) {
+						if (table.cell(idx, 4).data() === 'CROSS' && table.cell(idx, 12).data() > 0) {
+							return true;
+						}
+						return false;
+					}
+
+				}
+			},
+
+			//page length
+		]
+	});
+
+
+} );
+
+}(jQuery));
+
