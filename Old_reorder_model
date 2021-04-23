@@ -1,0 +1,56 @@
+
+namespace miscusi_wolf_services.Models.Wolf.Supply
+{
+        public class Reorder_model_viewModel
+        {
+            public string store_name { get; set; }
+            public string qsl_category { get; set; }
+            public string code { get; set; }
+            public string description { get; set; }
+            public string article_type { get; set; }
+            public string ct_description { get; set; }
+            public string current_stock { get; set; }
+            public string forecasted_stock_at_arrival { get; set; }
+            public string transfer_unit { get; set; }
+            public string qty_consumed_previous_week { get; set; }
+            public string base_unit { get; set; }
+            public string ct_suggested { get; set; }
+            public string ct_to_buy { get; set; }
+            public string week_released { get; set; }
+            public string latest_update { get; set; }
+            public string user { get; set; }
+        }
+
+        public class Reorder_viewModel
+    {
+            public string store_name { get; set; }
+            public string qsl_category { get; set; }
+            public string code { get; set; }
+            public string description { get; set; }
+            public string article_type { get; set; }
+            public string ct_description { get; set; }
+            public string current_stock { get; set; }
+            public string forecasted_stock_at_arrival { get; set; }
+            public string transfer_unit { get; set; }
+            public string qty_consumed_previous_week { get; set; }
+            public string base_unit { get; set; }
+            public string ct_suggested { get; set; }
+            public string ct_to_buy { get; set; }
+            public string week_released { get; set; }
+        }
+    
+    public class Rm_forecasted_salesModel
+    {
+        public string store_name { get; set; }
+        public string time_period { get; set; }
+        public DateTime start_date { get; set; }
+        public DateTime end_date { get; set; }
+        public string forecast_sales_ops { get; set; }
+        public string forecast_sales_sm { get; set; }
+        public DateTime latest_update { get; set; }
+        public string user { get; set; }
+        public string week_released { get; set; }
+    }
+
+
+}
