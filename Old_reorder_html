@@ -1,0 +1,147 @@
+
+
+<div class="row">
+    <div class="container-fluid">
+
+        <div class="col-lg-12 col-md-12">
+            <!--
+
+            <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+
+            <li class="nav-item ">
+                <a class="nav-link active" href="#ReorderModelView" role="tab" data-toggle="tab">
+                    <i class="material-icons">group</i>
+                    Reorder
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#ForecastSale" role="tab" data-toggle="tab">
+                    <i class="material-icons">account_circle</i>
+                    Forecast Sales
+                </a>
+            </li>
+
+
+
+            </ul>
+            -->
+            <div class="tab-content tab-space">
+                <div class="tab-pane active" id="ReorderModelView">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                            </h4>
+                            <p class="card-category">
+                                Choose the store and the supplier, modify the column 'Ct to buy'. Then export the csv file that can be uploaded on ERP.
+                            </p>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="material-datatables">
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" id="reorder_model_view" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Store</th>
+                                            <th>Supplier</th>
+                                            <th>Category ERP</th>
+                                            <th>Category QSL</th>
+                                            <th>Code SQL</th>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                            <th>CT UoM</th>
+                                            <th>Qty CT Suggested</th>
+                                            <th>Qtà CT To Buy</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Store</th>
+                                            <th>Supplier</th>
+                                            <th>Category ERP</th>
+                                            <th>Category QSL</th>
+                                            <th>Code SQL</th>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                            <th>CT UoM</th>
+                                            <th>Qty CT Suggested</th>
+                                            <th>Qtà CT To Buy</th>
+                                        </tr>
+                                    </tfoot>
+
+                                </table>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="ForecastSale">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                            </h4>
+                            <p class="card-category">
+                                Scegli il tuo store, aggiorna i dati di previsione delle vendite in € nella colonna 'Previsione vendite store manager', sulla tastiera premi invio dopo ogni modifica.
+                            </p>
+                            <p class="card-category">
+                                Una volta terminato, torna su pagina 'reorder' per valutare la nuova proposta di acquisto.
+                            </p>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="material-datatables">
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" id="rm_forecasted_sales" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Store</th>
+                                            <th>Periodo temporale</th>
+                                            <th>Data inizio periodo</th>
+                                            <th>Data fine periodo</th>
+                                            <th>Previsione vendite operation team</th>
+                                            <th>Previsione vendite store manager</th>
+                                            <th class="never">latest_update</th>
+                                            <th class="never">user</th>
+                                            <th class="never">week_released</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Store</th>
+                                            <th>Periodo temporale</th>
+                                            <th>Data inizio periodo</th>
+                                            <th>Data fine periodo</th>
+                                            <th>Previsione vendite operation team</th>
+                                            <th>Previsione vendite store manager</th>
+                                            <th class="never">latest_update</th>
+                                            <th class="never">user</th>
+                                            <th class="never">week_released</th>
+                                        </tr>
+                                    </tfoot>
+
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+@*import specicif script for the tables visibile in the view*@
+
+
+<script async src="~/assets/js/dataTable/table.ForecastedSales.js"></script>
+<script async src="~/assets/js/dataTable/table.ReorderModelView.js"></script>
